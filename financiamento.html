@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento - BenShop Auto</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000080">
+    <header>
+        <table width="100%" bgcolor="#000080" cellpadding="10">
+            <tr>
+                <td width="30%">
+                    <font color="white" size="6"><b>BenShop Auto</b></font>
+                </td>
+                <td width="70%" align="right">
+                    <nav>
+                        <font color="white">
+                            <a href="index.html" style="color: white; text-decoration: none;">Início</a> | 
+                            <a href="veiculos.html" style="color: white; text-decoration: none;">Veículos</a> | 
+                            <a href="sobre.html" style="color: white; text-decoration: none;">Sobre</a> | 
+                            <a href="contato.html" style="color: white; text-decoration: none;">Contato</a> | 
+                            <a href="financiamento.html" style="color: white; text-decoration: none;">Financiamento</a> | 
+                            <a href="carrinho.html" style="color: white; text-decoration: none;">Carrinho</a>
+                        </font>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <main>
+        <table width="100%" cellpadding="20">
+            <tr>
+                <td align="center">
+                    <h1>Financiamento</h1>
+                    <p>Realize o sonho do seu veículo novo com as melhores condições</p>
+                    <hr width="50%" color="#000080">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Opções de Financiamento</h2>
+                    <p>Na BenShop Auto, oferecemos diversas opções de financiamento para que você possa adquirir seu veículo com as melhores condições do mercado.</p>
+                    
+                    <h3>Financiamento Direto</h3>
+                    <p>Financiamento direto com a concessionária em até 60 parcelas.</p>
+                    
+                    <h3>Consórcio</h3>
+                    <p>Adquira seu veículo através de consórcio com parcelas que cabem no seu bolso.</p>
+                    
+                    <h3>Financiamento Bancário</h3>
+                    <p>Parcerias com os principais bancos para oferecer as melhores taxas.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Simulador de Financiamento</h2>
+                    <form oninput="calcular()">
+                        <table width="80%" border="1" bordercolor="#000080" cellpadding="10">
+                            <tr>
+                                <td width="50%">
+                                    <label for="valor">Valor do Veículo (R$):</label>
+                                </td>
+                                <td width="50%">
+                                    <input type="number" id="valor" name="valor" min="0" step="0.01" value="50000" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="entrada">Entrada (R$):</label>
+                                </td>
+                                <td>
+                                    <input type="number" id="entrada" name="entrada" min="0" step="0.01" value="10000" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="parcelas">Número de Parcelas:</label>
+                                </td>
+                                <td>
+                                    <select id="parcelas" name="parcelas" required>
+                                        <option value="12">12x</option>
+                                        <option value="24">24x</option>
+                                        <option value="36" selected>36x</option>
+                                        <option value="48">48x</option>
+                                        <option value="60">60x</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="taxa">Taxa de Juros (% ao mês):</label>
+                                </td>
+                                <td>
+                                    <input type="number" id="taxa" name="taxa" min="0" step="0.01" value="1.2" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="resultado">Valor da Parcela:</label>
+                                </td>
+                                <td>
+                                    <output id="resultado">R$ 0,00</output>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    
+                    <p><strong>Observação:</strong> Este cálculo é uma simulação aproximada. Valores reais podem variar conforme análise de crédito.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Vantagens do Financiamento na BenShop Auto</h2>
+                    <ul>
+                        <li>Taxas especiais</li>
+                        <li>Processo rápido e descomplicado</li>
+                        <li>Até 60 parcelas</li>
+                        <li>Primeira parcela para 90 dias</li>
+                        <li>Aprovação em até 24 horas</li>
+                    </ul>
+                    
+                    <h2>Documentos Necessários</h2>
+                    <ul>
+                        <li>RG e CPF</li>
+                        <li>Comprovante de residência</li>
+                        <li>Comprovante de renda</li>
+                        <li>CNH (Carteira Nacional de Habilitação)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <table width="100%" bgcolor="#000080" cellpadding="15">
+            <tr>
+                <td align="center">
+                    <font color="white">
+                        <p>BenShop Auto 2025 - Todos os direitos reservados</p>
+                        <p>Contato: contato@benshopauto.com | (66) 4002-8922</p>
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <script>
+    function calcular() {
+        // Obter os valores dos campos
+        var valor = parseFloat(document.getElementById('valor').value);
+        var entrada = parseFloat(document.getElementById('entrada').value);
+        var parcelas = parseFloat(document.getElementById('parcelas').value);
+        var taxa = parseFloat(document.getElementById('taxa').value);
+        
+        // Calcular o valor financiado
+        var valorFinanciado = valor - entrada;
+        
+        // Calcular a taxa de juros mensal
+        var taxaMensal = taxa / 100;
+        
+        // Calcular o valor da parcela usando a fórmula de juros compostos
+        var parcela = valorFinanciado * (taxaMensal * Math.pow(1 + taxaMensal, parcelas)) / (Math.pow(1 + taxaMensal, parcelas) - 1);
+        
+        // Exibir o resultado formatado
+        document.getElementById('resultado').value = 'R$ ' + parcela.toFixed(2).replace('.', ',');
+    }
+    
+    // Calcular automaticamente ao carregar a página
+    window.onload = calcular;
+    </script>
+</body>
+</html>
