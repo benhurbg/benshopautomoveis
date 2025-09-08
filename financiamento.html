@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financiamento - BenShop Auto</title>
 </head>
-<body>
+<body bgcolor="#FFFFFF" text="#000080">
     <header>
-        <table width="100%" cellpadding="10">
+        <table width="100%" bgcolor="#000080" cellpadding="10">
             <tr>
                 <td width="30%">
-                    <b>BenShop Auto</b>
+                    <font color="white" size="6"><b>BenShop Auto</b></font>
                 </td>
                 <td width="70%" align="right">
                     <nav>
-                        <a href="index.html">Início</a> 
-                        <a href="veiculos.html">Veículos</a> 
-                        <a href="sobre.html">Sobre</a> 
-                        <a href="contato.html">Contato</a> 
-                        <a href="financiamento.html">Financiamento</a> 
-                        <a href="carrinho.html">Carrinho</a>
+                        <font color="white">
+                            <a href="index.html" style="color: white; text-decoration: none;">Início</a> 
+                            <a href="veiculos.html" style="color: white; text-decoration: none;">Veículos</a> 
+                            <a href="sobre.html" style="color: white; text-decoration: none;">Sobre</a> 
+                            <a href="contato.html" style="color: white; text-decoration: none;">Contato</a> 
+                            <a href="financiamento.html" style="color: white; text-decoration: none;">Financiamento</a> 
+                            <a href="carrinho.html" style="color: white; text-decoration: none;">Carrinho</a>
+                        </font>
                     </nav>
                 </td>
             </tr>
@@ -52,38 +54,60 @@
             <tr>
                 <td>
                     <h2>Simulador de Financiamento</h2>
-                    <form>
-                        <table width="80%" border="1" cellpadding="10">
+                    <form oninput="calcular()">
+                        <table width="80%" border="1" bordercolor="#000080" cellpadding="10">
                             <tr>
-                                <td>Valor do Veículo (R$):</td>
-                                <td><input type="number" name="valor" required></td>
+                                <td width="50%">
+                                    <label for="valor">Valor do Veículo (R$):</label>
+                                </td>
+                                <td width="50%">
+                                    <input type="number" id="valor" name="valor" min="0" step="0.01" value="50000" required>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Entrada (R$):</td>
-                                <td><input type="number" name="entrada" required></td>
-                            </tr>
-                            <tr>
-                                <td>Número de Parcelas:</td>
                                 <td>
-                                    <select name="parcelas" required>
+                                    <label for="entrada">Entrada (R$):</label>
+                                </td>
+                                <td>
+                                    <input type="number" id="entrada" name="entrada" min="0" step="0.01" value="10000" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="parcelas">Número de Parcelas:</label>
+                                </td>
+                                <td>
+                                    <select id="parcelas" name="parcelas" required>
                                         <option value="12">12x</option>
                                         <option value="24">24x</option>
-                                        <option value="36">36x</option>
+                                        <option value="36" selected>36x</option>
                                         <option value="48">48x</option>
                                         <option value="60">60x</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Taxa de Juros (% ao mês):</td>
-                                <td><input type="number" name="taxa" required></td>
+                                <td>
+                                    <label for="taxa">Taxa de Juros (% ao mês):</label>
+                                </td>
+                                <td>
+                                    <input type="number" id="taxa" name="taxa" min="0" step="0.01" value="1.2" required>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Valor da Parcela:</td>
-                                <td><output>R$ 0,00</output></td>
+                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="resultado">Valor da Parcela:</label>
+                                </td>
+                                <td>
+                                    <output id="resultado">R$ 0,00</output>
+                                </td>
                             </tr>
                         </table>
                     </form>
+                    
                     <p><strong>Observação:</strong> Este cálculo é uma simulação aproximada. Valores reais podem variar conforme análise de crédito.</p>
                 </td>
             </tr>
@@ -111,14 +135,18 @@
     </main>
 
     <footer>
-        <table width="100%" cellpadding="15">
+        <table width="100%" bgcolor="#000080" cellpadding="15">
             <tr>
                 <td align="center">
-                    <p>BenShop Auto 2025 - Todos os direitos reservados</p>
-                    <p>Contato: contato@benshopauto.com | (66) 4002-8922</p>
+                    <font color="white">
+                        <p>BenShop Auto 2025 - Todos os direitos reservados</p>
+                        <p>Contato: contato@benshopauto.com | (66) 4002-8922</p>
+                    </font>
                 </td>
             </tr>
         </table>
     </footer>
+
 </body>
-</html>
+
+</html> 
