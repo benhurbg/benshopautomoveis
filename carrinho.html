@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - BenShop Auto</title>
+</head>
+<body bgcolor="#F5F5F5" text="#000000">
+   
+    <table width="100%" bgcolor="#000080" cellpadding="10">
+        <tr>
+            <td width="30%">
+                <font color="white" size="6"><b>BenShop Auto</b></font>
+            </td>
+            <td width="70%" align="right">
+                <font color="white">
+                    <a href="index.html" style="color: white; text-decoration: none;">Início</a> 
+                    <a href="veiculos.html" style="color: white; text-decoration: none;">Veículos</a> 
+                    <a href="sobre.html" style="color: white; text-decoration: none;">Sobre</a> 
+                    <a href="contato.html" style="color: white; text-decoration: none;">Contato</a> 
+                    <a href="financiamento.html" style="color: white; text-decoration: none;">Financiamento</a> 
+                    <a href="carrinho.html" style="color: white; text-decoration: none;">Carrinho</a>
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    
+    <table width="100%" cellpadding="20">
+        <tr>
+            <td align="center">
+                <h1><font color="#000080">Meu Carrinho de Compras</font></h1>
+                <p>Revise e gerencie os veículos selecionados</p>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td>
+                <h2><font color="#000080">Itens no Carrinho</font></h2>
+                <table width="100%" border="1" bordercolor="#000080" cellpadding="10">
+                    <tr bgcolor="#E6F0FF">
+                        <th width="30%">Veículo</th>
+                        <th width="20%">Preço</th>
+                        <th width="20%">Quantidade</th>
+                        <th width="20%">Subtotal</th>
+                        <th width="10%">Ação</th>
+                    </tr>
+                    <tr>
+                        <td>SUV Premium 2025</td>
+                        <td align="right">R$ 145.900,00</td>
+                        <td align="center">
+                            <form>
+                                <input type="number" name="quantidade" value="1" min="1" max="10" size="3">
+                                <input type="submit" value="Atualizar">
+                            </form>
+                        </td>
+                        <td align="right">R$ 145.900,00</td>
+                        <td align="center"><a href="carrinho.html?remover=1" style="color: #FF0000;">Remover</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hatch Esportivo 2025</td>
+                        <td align="right">R$ 89.990,00</td>
+                        <td align="center">
+                            <form>
+                                <input type="number" name="quantidade" value="1" min="1" max="10" size="3">
+                                <input type="submit" value="Atualizar">
+                            </form>
+                        </td>
+                        <td align="right">R$ 89.990,00</td>
+                        <td align="center"><a href="carrinho.html?remover=2" style="color: #FF0000;">Remover</a></td>
+                    </tr>
+                    <tr bgcolor="#E6F0FF">
+                        <td colspan="3" align="right"><b>Total do Carrinho:</b></td>
+                        <td align="right"><b>R$ 235.890,00</b></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+    
+        <tr>
+            <td>
+                <h2><font color="#000080">Formas de Pagamento</font></h2>
+                <table width="100%" cellpadding="15">
+                    <tr align="center">
+                        <td width="25%">
+                            <p><b>Cartão de Crédito</b></p>
+                            <p>Parcele em até 12x</p>
+                        </td>
+                        <td width="25%">
+                            <p><b>Boleto Bancário</b></p>
+                            <p>5% de desconto</p>
+                        </td>
+                        <td width="25%">
+                            <p><b>Financiamento</b></p>
+                            <p>Até 60 parcelas</p>
+                        </td>
+                        <td width="25%">
+                            <p><b>PIX</b></p>
+                            <p>10% de desconto</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+       
+        <tr>
+            <td>
+                <h2><font color="#000080">Perguntas Frequentes</font></h2>
+                <details>
+                    <summary><b>Como alterar a quantidade de itens?</b></summary>
+                    <p>Utilize o campo de quantidade ao lado de cada produto e clique em "Atualizar".</p>
+                </details>
+                <details>
+                    <summary><b>Posso reservar um veículo?</b></summary>
+                    <p>Sim, ao adicionar um veículo ao carrinho, ele ficará reservado para você por 24 horas.</p>
+                </details>
+                <details>
+                    <summary><b>Qual o prazo de entrega?</b></summary>
+                    <p>O prazo de entrega varia de 5 a 15 dias úteis, dependendo da sua localização.</p>
+                </details>
+            </td>
+        </tr>
+    </table>
+
+   
+    <table width="100%" bgcolor="#000080" cellpadding="15">
+        <tr>
+            <td align="center">
+                <font color="white">
+                    <p>BenShop Auto 2025 - Todos os direitos reservados</p>
+                    <p>Contato: contato@benshopauto.com | (66) 4002-8922</p>
+                </font>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
